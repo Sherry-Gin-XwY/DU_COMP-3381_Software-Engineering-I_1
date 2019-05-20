@@ -6,6 +6,8 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 import { FloatLabel } from "../float-label/float-label.component";
 
+import { UserService } from "../shared/user.service";
+
 @NgModule({
     imports: [
         NativeScriptCommonModule,
@@ -15,6 +17,9 @@ import { FloatLabel } from "../float-label/float-label.component";
     declarations: [
         HomeComponent,
         FloatLabel
+    ],
+    providers: [
+        UserService,   
     ],
     schemas: [
         NO_ERRORS_SCHEMA
