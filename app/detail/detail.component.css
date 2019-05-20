@@ -1,0 +1,51 @@
+.menu-icon {
+    font-size: 26; 
+    color: white;
+    padding-left: 13;
+    vertical-align: center;
+} 
+
+.home-panel{
+	vertical-align: center;
+	font-size: 20;
+	margin: 15;
+}
+
+.detail-section {
+    margin: 20 0;
+}
+
+.detail-section__title {
+    font-size: 20;
+    font-weight: 600;
+    margin-bottom: 20;
+}
+
+.detail-photo {
+    width: 45;
+    margin-right: 15;
+}
+
+.detail-owe-ammount {
+    font-size: 16;
+    margin: 15;
+}
+
+.detail-owe-ammount.owe {
+    color: #f67979;
+}
+
+.detail-owe-ammount .settle {
+    color: #b8b8b8;
+    text-decoration: line-through;
+}
+
+.default-button {    
+    background-color: #8f91de;
+    color: #fff;
+    padding: 14 10;
+    border-radius: 5;
+    text-transform: uppercase;
+    font-size: 13;
+    font-weight: 600;
+}

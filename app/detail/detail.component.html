@@ -1,0 +1,140 @@
+<ActionBar title="Detail" class="action-bar">
+        <StackLayout orientation="horizontal" horizontalAlignment="left">
+                <Label col="0" text="&#xf0c9;" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+                <Label col="1" text="Detail" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+        </StackLayout>
+    </ActionBar>
+<ScrollView>
+    <StackLayout width="100%" class="default-container">
+
+        <FlexboxLayout flexDirection="row" class="description-text">
+            <Label text="Added on"></Label>
+            <Label text=" October 19, 2019 "></Label>
+        </FlexboxLayout>
+
+        <!--Apartment Complex -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Apartment Complex:" class="detail-section__title"></Label>
+            <GridLayout columns="auto, *, auto" rows="auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Montair" row="0" col="1"></Label>
+
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--Unit -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Unit: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="415" textAlignment="center" class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--Due Date -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Due Date: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Wednesday, June 12, 2019" textAlignment="center"
+                        class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--Service -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Service: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Cleaning" textAlignment="center" class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--Order By -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Service: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Mike" textAlignment="center" class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--size -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Size: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="3" textAlignment="center" class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--contractor -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Contractor: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Not assigned yet" textAlignment="center"
+                        class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--contractor Phone -->
+        <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Contractor Phone: " class="detail-section__title"></Label>
+            <GridLayout columns="auto, auto, auto, *, auto" rows="auto, auto, auto,auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Not assigned yet" textAlignment="center"
+                        class="owe-name"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+       <!-- <StackLayout orientation="vertical" class="detail-section">
+            <Label text="Apartent Complex:" class="detail-section__title"></Label>
+
+            <GridLayout columns="auto, auto, auto, *" rows="auto, auto, auto, auto">
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="0">
+
+                    <Label text="Apartent Complex : 2500 E Asbury" row="0"
+                        col="1"></Label>
+                    <Label text="Unit # : 666" row="0" col="1"></Label>
+                    <Label text="size” : 1200ft" row="0" col="1"></Label>
+                </StackLayout>
+
+                <StackLayout verticalAlignment="top" orientation="vertical"
+                    row="0" col="2">
+
+                    <Label text=" " textAlignment="center" class="owe-name"></Label>
+                </StackLayout>
+
+                <Label row="1" col="0" colSpan="5" height="10"></Label>
+
+
+            </GridLayout>
+        </StackLayout>-->
+    </StackLayout>
+</ScrollView>

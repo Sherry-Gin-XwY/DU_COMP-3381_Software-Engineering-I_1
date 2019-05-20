@@ -10,6 +10,7 @@ registerElement("PreviousNextView", () => require("nativescript-iqkeyboardmanage
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
+import { DetailComponent } from "./detail/detail.component";
 
 
 import { UserService } from "./shared/user.service";
@@ -31,7 +32,7 @@ import { WorkordersService } from "./shared/workorders.service";
     ],
     declarations: [
         AppComponent,
-        
+        DetailComponent
     ],
     providers: [
         UserService,

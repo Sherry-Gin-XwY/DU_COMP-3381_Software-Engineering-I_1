@@ -1,1 +1,69 @@
-<page-router-outlet></page-router-outlet>
+<RadSideDrawer drawerTransition="PushTransition">
+        <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
+    
+            
+            <!-- User information in the sidedraw bar -->
+            <StackLayout class="sidedrawer-header">
+                <Image src="" class="sidedrawer-avatar"></Image>
+                <Label class="sidedrawer-header-text var" text="username"></Label>
+                <Label class="sidedrawer-header-footnote var" text="username@mail.com"></Label>
+            </StackLayout>
+    
+            
+            <ScrollView row="1">
+                <StackLayout class="sidedrawer-content">
+    
+                    <!-- Home Page -->
+                    <GridLayout columns="auto, *" class="sidedrawer-list-item" title="Home" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf015;" class="fa sidedrawer-item"></Label>
+                        <Label row="0" col="1" text="Home" class="var m-l-10 sidedrawer-item" (tap)="home()"></Label>
+                    </GridLayout>
+    
+                    <StackLayout class="hr-light"></StackLayout>
+    
+                    <!-- Create Work -->            <!-- 如果目前是在这个页面，加粗颜色 -->
+                    <GridLayout columns="auto, *" class="sidedrawer-list-item sidedrawer-list-item-active" title="Creatework"
+                        tap="onNavigationItemTap"  (tap)="creatework()">
+                        <Label row="0" col="0" text="&#xf005;" class="fa sidedrawer-item"></Label>
+                        <Label row="0" col="1" text="Create Work" class="var m-l-10 sidedrawer-item"></Label>
+                    </GridLayout>
+
+                    <!-- 
+                    <StackLayout class="hr-light"></StackLayout>
+    
+                    Search Work 
+                    <GridLayout columns="auto, *" class="sidedrawer-list-item" title="Search" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf002;" class="fa sidedrawer-item"></Label>
+                        <Label row="0" col="1" text="Search" class="var m-l-10 sidedrawer-item")></Label>
+                    </GridLayout>-->
+    
+                    <StackLayout class="hr-light"></StackLayout>
+    
+                    <!-- Calendar -->
+                    <GridLayout columns="auto, *" class="sidedrawer-list-item" title="Calendar" tap="onNavigationItemTap"  (tap)="calendar()">
+                        <Label row="0" col="0" text="&#xf073;" class="fa sidedrawer-item"></Label>
+                        <Label row="0" col="1" text="Calendar" class="var m-l-10 sidedrawer-item"></Label>
+                    </GridLayout>
+    
+                    <StackLayout class="hr-light"></StackLayout>
+    
+                    <!-- Settings -->
+                    <GridLayout columns="auto, *" class="sidedrawer-list-item" title="Camera" tap="onNavigationItemTap">
+                        <Label row="0" col="0" text="&#xf013;" class="fa sidedrawer-item"></Label>
+                        <Label row="0" col="1" text="Settings" class="var m-l-10 sidedrawer-item"></Label>
+                    </GridLayout>
+    
+                    <StackLayout class="hr-light"></StackLayout>
+    
+                    <!-- Logout button -->
+                    <GridLayout columns="auto, *" class="sidedrawer-listitem" title="logout" tap="onNavgationItemTap">
+                        <button col="1" text="logout" (tap)="logout()" color="white" backgroundColor="red"></button>
+                    </GridLayout>
+    
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+    
+        <page-router-outlet tkMainContent class="page page-content"></page-router-outlet>
+    
+    </RadSideDrawer>

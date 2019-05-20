@@ -1,0 +1,49 @@
+<ActionBar title="New Work Order" class="action-bar">
+    <StackLayout orientation="horizontal" horizontalAlignment="left">
+        <Label col="0" text="&#xf0c9;" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+        <Label col="1" text="New Work Order" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+    </StackLayout>
+</ActionBar>
+
+<!--Create work Content-->
+<ScrollView class="page">
+    <StackLayout class="home-panel from input-field">
+
+        <!-- Apartment Complex -->
+        <Label text="Apartment Complex" class="heading"></Label>
+        <TextField [(ngModel)]="aptComplex" hint="Enter a Apartment Complex" class="input input-border"></TextField>
+
+        <!-- Unit # -->
+        <Label text="Unit #" class="heading"></Label>
+        <TextField [(ngModel)]="Unit" hint="Enter unit #" class="input input-border"></TextField>
+
+        <!-- Due Date -->
+        <Label text="Due Date" class="heading"></Label>
+        <TextField [(ngModel)]="DueDate" hint="Enter Due Date" class="input input-border"></TextField>
+
+        <!-- Select Date -->
+
+        <!-- test -->
+
+        <!-- Service -->
+        <Label text="Service" class="heading"></Label>
+        <TextField [(ngModel)]="Service" hint="Enter a Service" class="input input-border"></TextField>
+
+        <!-- Ordered By -->
+        <Label text="Ordered By" class="heading"></Label>
+        <TextField [(ngModel)]="OrderedBy" hint="Ordered By" class="input input-border"></TextField>
+
+        <!-- Size -->
+        <Label text="Size" class="heading"></Label>
+        <TextField [(ngModel)]="Size" hint="Enter Size" class="input input-border"></TextField>
+
+        <StackLayout class="hr-light"></StackLayout>
+
+        <!-- Submit -->
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <Button text="Submit" (tap)="submit()" class="btn btn-primary"></Button>
+            <Button text="Cancel" (tap)="cancel()" class="btn btn-primary"></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ScrollView>

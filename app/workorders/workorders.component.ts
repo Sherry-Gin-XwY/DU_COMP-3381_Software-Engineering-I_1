@@ -21,7 +21,20 @@ export class WorkordersComponent implements OnInit {
         let searchBar = <SearchBar> args.object;
         console.log("You are searching fro " + searchBar.text);
     }
-    items: { desc: string, service: string, time: string, constractor: string, status: string, showName: boolean} [] = []
+    items: { desc: string, service: string, time: string, constractor: string, status: string, showName: boolean} [] = [
+        
+        { desc:"Montair #415", service:"Cleaning", time:"6/12/19", constractor:"", status:"pending", showName:true},
+        { desc:"Test Apartment Complex #101", service:"Painting", time:"11/13/19", constractor:"John S.", status:"Due", showName:true},
+        { desc:"Test Apartment Complex 2 # 201", service:"Draining", time:"6/12/19", constractor:"John S.", status:"Completed", showName:true},
+        { desc:"Test Apartment Complex 2 # 201", service:"Draining", time:"6/18/19", constractor:"", status:"in_Progress", showName:false},
+        { desc:"2411 E Asubry Ave  #415", service:"Texture Repair", time:"6/12/19", constractor:"", status:"pending", showName:false},
+        { desc:"2411 E Asubry Ave  #415", service:"Drywall Repair", time:"6/12/19", constractor:"John S.", status:"pending", showName:true},
+        { desc:"2411 E Asubry Ave  #415", service:"Cleaning", time:"6/12/19", constractor:"", status:"pending", showName:false},
+        { desc:"Montair #415", service:"Custom", time:"6/12/19", constractor:"", status:"pending", showName:false},
+        { desc:"2411 E Asubry Ave  #415", service:"Custom", time:"6/12/19", constractor:"John S.", status:"pending", showName:true},
+        { desc:"Montair #415", service:"Cleaning", time:"6/12/19", constractor:"", status:"pending", showName:false},
+        { desc:"Montair #415", service:"Others", time:"6/12/19", constractor:"", status:"pending", showName:false}
+    ]
 
 
     constructor(private workorderService: WorkordersService, private userService: UserService,  private routerExtensions: RouterExtensions ) {
@@ -56,17 +69,13 @@ export class WorkordersComponent implements OnInit {
             return "in_Progress";
         }
     }
-/* 
-    logout() {
-        this.userService.logout();
-        this.routerExtensions.navigate(["/login"], { clearHistory: true });
-    } */
-/* 
+
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();
-    } */
-/* 
+    }
+
+
     onDetail(): void {
         this.routerExtensions.navigate(["/detail"], {
             animated: true,
@@ -76,7 +85,7 @@ export class WorkordersComponent implements OnInit {
                 curve: "easeIn"
             }
         });
-    } */
+    }
 
     alert(message: string) {
         return alert({

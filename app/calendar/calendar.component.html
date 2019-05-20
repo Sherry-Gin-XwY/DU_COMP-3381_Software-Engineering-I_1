@@ -1,0 +1,25 @@
+<ActionBar title="Calendar" class="action-bar">
+        <StackLayout orientation="horizontal" horizontalAlignment="left">
+            <Label col="0" text="&#xf0c9;" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+            <Label col="1" text="Calendar" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+        </StackLayout>
+    </ActionBar>
+    
+
+            <!--Source from https://play.nativescript.org/?template=play-ng&id=DKSI1b&v=10-->
+            <RadCalendar
+                [eventSource]="calendarEvents" 
+                
+                eventsViewMode="Inline" 
+                selectionMode="Single" 
+                viewMode="Month" 
+                transitionMode="Stack"
+                locale="en-US" 
+                
+                (dateSelected)="onDateSelected($event)" 
+                (dateDeselected)="onDateDeselected($event)" 
+                (navigatedToDate)="onNavigatedToDate($event)" 
+                (navigatingToDateStarted)="onNavigatingToDateStarted($event)"
+                (viewModeChanged)="onViewModeChanged($event)"
+                ></RadCalendar>	
+      
