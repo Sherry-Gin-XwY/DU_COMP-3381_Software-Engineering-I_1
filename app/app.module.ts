@@ -14,6 +14,7 @@ import { AppComponent } from "./app.component";
 
 import { UserService } from "./shared/user.service";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { WorkordersService } from "./shared/workorders.service";
 
 @NgModule({
     bootstrap: [
@@ -34,7 +35,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
     ],
     providers: [
         UserService,
-        
+        WorkordersService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

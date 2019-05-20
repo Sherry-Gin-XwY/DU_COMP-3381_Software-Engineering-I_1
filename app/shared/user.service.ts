@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class UserService{
     private uid:string;
     private key:string;
-    constructor(private http:HttpClient){}
+    constructor(private http:HttpClient){
+    }
 
     /* 修改 API */
     login(user: User) {
@@ -20,16 +21,20 @@ export class UserService{
             //保存数据
             this.uid = res.uid;
             this.key = res.key;
+            console.log("saved uid and keys");
         }).catch(this.handleErrors);
+    }
+
+    getUid(){
+        if (!this.uid)
+            console.error("GET UID called but no uid");
+        return this.uid;
     }
 
     getKey(){
         return this.key;
     }
 
-    getUid(){
-        return this.uid;
-    }
 
     handleErrors(error) {
         console.error(error.message);

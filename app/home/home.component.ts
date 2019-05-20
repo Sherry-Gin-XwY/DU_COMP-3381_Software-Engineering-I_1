@@ -3,6 +3,7 @@ import { FloatLabel } from "../float-label/float-label.component";
 import { request } from "tns-core-modules/http";
 import { Page } from "tns-core-modules/ui/page";
 import { RouterExtensions } from "nativescript-angular/router";
+
 import { User } from "../shared/user.model";
 import { UserService } from "../shared/user.service";
 
@@ -42,9 +43,12 @@ export class HomeComponent implements OnInit {
     login() {
         this.userService.login(this.user)
             .then((res:any) => {
-                console.log("登录成功:",res);
+                console.log("登录成功:", res);
                 this.processing = false;
                 this.routerExtensions.navigate(["/workorders"], { clearHistory: true });
+/*                 this.alert("Uid: " + this.userService.getUid());
+                this.alert("Key: " + this.userService.getKey()); */
+
             })
             .catch((err:any) => {
                 console.log("登录失败:",err);

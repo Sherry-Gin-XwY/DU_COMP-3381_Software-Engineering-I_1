@@ -1,0 +1,97 @@
+<ActionBar title="Home" class="action-bar">
+        <StackLayout orientation="horizontal" horizontalAlignment="left">
+            <Label col="0" text="&#xf0c9;" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+            <Label col="1" text="Home" class="fa menu-icon" (tap)="onDrawerButtonTap($event)"></Label>
+        </StackLayout>
+    </ActionBar>
+    
+    
+    <GridLayout tkExampleTitle tkToggleNavButton>
+    
+        <!-- <RadListView [items]="items" marginRight="-2" backgroundColor="#e6e6e6" (itemLoading)="onItemLoading($event)"> -->
+        <RadListView [items]="items" marginRight="-2" backgroundColor="#e6e6e6">
+            <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical" spanCount="2"></ListViewStaggeredLayout>
+    
+                <!-- Test -->
+    <!--         <ng-template tkListItemTemplate let-item="item">
+                <StackLayout  width="210" height="210" class="card-status-{{ item.status }}"
+                    backgroundColor="lightgray">
+                    <GridLayout padding="3">
+                        <Label text="{{ item.desc }} {{ item.unit }}" class="item-desc" textWrap="true"></Label>
+                    </GridLayout>
+                    <GridLayout padding="3">
+                            <Label text="{{ item.service }}" class="item-name" textWrap="true"></Label>
+                        </GridLayout>
+                        <GridLayout padding="3">
+                                <Label text="Due: {{ item.time }}" class="item-time" textWrap="true"></Label>
+                            </GridLayout>
+                </StackLayout>
+            </ng-template>
+     -->
+    
+    
+            
+            <ng-template tkListItemTemplate let-item="item">
+                <!--height=800px-->
+                <StackLayout margin="3" borderRadius="15" class="card-status-{{ item.status }}" (tap)="onDetail()">
+    
+                    <!-- <GridLayout rows="*" columns="*" (tap)="goToArtist()">
+                        
+                        <Image src="{{ item.imageSrc }}" row="0" col="0" width="200"
+                            height="120" stretch="aspectFill"></Image>
+                        
+                    </GridLayout> -->
+    
+                    <!-- Test -->
+    
+                    <!-- Montair -->
+                    <!--Changes background for first line on card-->
+                    <GridLayout  padding="3">
+                        <Label col=0 row=1 text="{{ item.desc }} {{ item.unit }}" class="item-desc" textWrap="true"></Label>
+                    </GridLayout>
+    
+                    <!-- Cleaning -->
+                    <!--Changes background for second line on card-->
+                    <GridLayout  padding="3">
+                        <Label text="{{ item.service }}" class="item-name" textWrap="true"></Label>
+                    </GridLayout>
+    
+                    <!-- Due date -->
+                    <!--Changes background for thrid row-->
+                    <GridLayout  padding="3">
+                        <Label text="Due: {{ item.time }}" class="item-time" textWrap="true"></Label>
+                    </GridLayout>
+    
+                    <!-- Assigned contractor -->
+                    <GridLayout padding="5" *ngIf="item.showName">
+                        <Label text="Constractor: {{ item.constractor }}" class="item-name2" textWrap="true"></Label>
+                    </GridLayout>
+    
+    
+                    <!-- hide the Assigned contracter if not assigned -->
+                    <!-- Assigned contracter if not assigned -->
+                    <!--                 <GridLayout backgroundColor="white" padding="0">
+                        <Label text="" class="" textWrap="true"></Label>
+                    </GridLayout> -->
+    
+                    <!-- The work -->
+                    <GridLayout padding="5">
+                        <Label text="{{ item.status }}" class="item-status" textWrap="true"></Label>
+                    </GridLayout>
+    
+    
+                    <GridLayout padding="1">
+                        <Label text="{{ item.aC }}" class="item-aC" textWrap="true"></Label>
+                    </GridLayout>
+    
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+    </GridLayout>
+    
+    <!--
+    <StackLayout>
+        <Label class="body m-20" [text]="message" textWrap="true"></Label>
+        <Button class="btn btn-primary" text="Log out" (tap)="logout()"></Button>
+    </StackLayout>
+    -->
